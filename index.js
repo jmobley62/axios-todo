@@ -135,6 +135,7 @@ function showTodos(data) {
     })
 
     // - If a todo item is complete, it should have a strikethrough line on it
+    
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
