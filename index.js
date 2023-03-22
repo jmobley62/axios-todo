@@ -31,7 +31,6 @@ function logUsers() {
 
 logUsers();
 
-
 // ---Do a POST request---
 
 // const newTodo = {
@@ -107,14 +106,14 @@ function showTodos(data) {
     const h4 = document.createElement("h4");
     h4.textContent = data[i].price;
     todoList.appendChild(h4);
-    
+
     const h5 = document.createElement("h5");
     h5.textContent = data[i].description;
     todoList.appendChild(h5);
-    
+
     // ----------Checkbox----------
     // - Each todo will have a checkbox where it can be marked complete or incomplete
-    
+
     // - Checking the checkbox should update the database
     // Append & Style Checkbox
 
@@ -124,18 +123,17 @@ function showTodos(data) {
     completeBox.style.visibility = "hidden";
     h3.appendChild(completeBox);
 
-    h3.addEventListener('mouseover', function (e) {
+    h3.addEventListener("mouseover", function (e) {
       e.preventDefault();
       completeBox.style.visibility = "visible";
-    })
+    });
 
-    h3.addEventListener('mouseout', function (e) {
+    h3.addEventListener("mouseout", function (e) {
       e.preventDefault();
       completeBox.style.visibility = "hidden";
-    })
+    });
 
     // - If a todo item is complete, it should have a strikethrough line on it
-    
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -149,10 +147,10 @@ function showTodos(data) {
         h5.style.textDecoration = "none";
       }
     });
-    
+
     // ----------Delete Button----------
     // - A user will be able to delete todos (this is different from marking a todo as "completed")
-    
+
     // - Each todo should be rendered with a button marked "X" or "Delete" that when clicked, will delete the Todo
     // Append & Style Delete Button
 
@@ -162,15 +160,15 @@ function showTodos(data) {
     deleteBtn.style.visibility = "hidden";
     h3.appendChild(deleteBtn);
 
-    h3.addEventListener('mouseover', function (e) {
+    h3.addEventListener("mouseover", function (e) {
       e.preventDefault();
       deleteBtn.style.visibility = "visible";
-    })
+    });
 
-    h3.addEventListener('mouseout', function (e) {
+    h3.addEventListener("mouseout", function (e) {
       e.preventDefault();
       deleteBtn.style.visibility = "hidden";
-    })
+    });
 
     deleteBtn.addEventListener("click", function (e) {
       e.preventDefault();
